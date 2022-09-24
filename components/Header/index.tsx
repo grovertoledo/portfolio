@@ -23,10 +23,10 @@ export default function Header({}: Props) {
           duration:  1.5,
         }}
       >
-        {/* Social icons */}
+        <SocialIcon url="https://www.linkedin.com/in/grovertoledo/" fgColor='gray' bgColor='transparent'/>
         <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
-        <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
-        <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
+        <SocialIcon url="https://www.instagram.com/grovitole/" fgColor='gray' bgColor='transparent'/>
+        <SocialIcon url="https://github.com/grovertoledo" fgColor='gray' bgColor='transparent'/>
       </motion.div>
       <motion.div
         className='flex flex-row items-center text-gray-300 cursor-pointer'
