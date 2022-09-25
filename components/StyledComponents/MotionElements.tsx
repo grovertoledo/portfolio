@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import media from "styled-media-query";
 import { motion } from 'framer-motion';
+import { ReactComponentElement, ReactElement } from 'react';
 
-// const MainContainer = styled.div`
-//   ${media.lessThan('large')`
-//     ${tw`bg-red-500`}
-//   `}
-// `;
-const MotionX = ({children, initialNegative, motionValue}) => {
+type Props = {
+  children: Array<ReactElement>,
+  initialNegative: boolean,
+  motionValue: number,
+}
+
+const MotionX = ({children, initialNegative, motionValue}: Props) => {
   const initialPosition = initialNegative ? -motionValue : motionValue;
   return (
     <motion.div
