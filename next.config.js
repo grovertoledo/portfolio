@@ -4,7 +4,11 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     styledComponents: true,
-  }
+  },
+  images: {
+    domains: ['media-exp1.licdn.com'],
+    formats: ['image/avif', 'image/webp'],
+  },
 }
 
 module.exports = nextConfig
