@@ -6,7 +6,10 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['media-exp1.licdn.com'],
+    domains: [
+      'media-exp1.licdn.com',
+      'avatars.githubusercontent.com'
+    ],
     formats: ['image/avif', 'image/webp'],
   },
 }
