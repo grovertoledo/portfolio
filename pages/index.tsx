@@ -2,11 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import styles from '../styles/Home.module.css'
+import { About } from '../components/About'
+import Experience from '../components/Experience'
+import Skills from '../components/Skills'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
         <title>Grover&apos;s portfolio</title>
         <meta name="description" content="Grover Toledo's portfolio" />
@@ -14,15 +16,22 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      {/* Hero */}
-      <section id='hero'>
+
+      <section id='hero' className='snap-start'>
         <Hero />
-      </section>      
-      {/* About */}
+      </section>
 
-      {/* Experience */}
+      <section id='about' className='snap-center'>
+        <About />
+      </section>
+      
+      <section id='experience' className='snap-center'>
+        <Experience />
+      </section>
 
-      {/* Skill */}
+      <section id='skills' className='snap-start'>
+        <Skills />
+      </section>
 
       {/* Projects */}
 

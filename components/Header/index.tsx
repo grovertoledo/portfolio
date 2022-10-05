@@ -1,52 +1,32 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons';
-import { motion } from 'framer-motion';
+import { MotionX } from '../StyledComponents/MotionElements';
 
 type Props = {}
+
+const socialLinks = [
+  'https://www.linkedin.com/in/grovertoledo/',
+  'https://twitter.com/grover_toledo',
+  'https://www.instagram.com/grovitole/',
+  'https://github.com/grovertoledo',
+]
+
+const RenderLinks = socialLinks.map((link, index) => (
+  <SocialIcon url={link} fgColor='gray' bgColor='transparent' key={index}/>
+))
 
 export default function Header({}: Props) {
   return (
     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
-      <motion.div
-        className='flex flex-row items-cemter'
-        initial={{
-          x: -500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration:  1.5,
-        }}
-      >
-        {/* Social icons */}
-        <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
-        <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
-        <SocialIcon url="https://twitter.com/grover_toledo" fgColor='gray' bgColor='transparent'/>
-      </motion.div>
-      <motion.div
-        className='flex flex-row items-center text-gray-300 cursor-pointer'
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration:  1.5,
-        }}
-      >
+      <MotionX initialNegative={true} motionValue={500}>
+        {RenderLinks}
+      </MotionX>
+      <MotionX initialNegative={false} motionValue={500}>
         <SocialIcon className='cursor-pointer' network='email' fgColor='gray' bgColor='transparent'/>
-        <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Contact me</p>
-      </motion.div>
+        <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
+          Contact me
+        </p>
+      </MotionX>
     </header>
   )
 }
