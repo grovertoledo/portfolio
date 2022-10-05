@@ -8,7 +8,8 @@ const nextConfig = {
   images: {
     domains: [
       'media-exp1.licdn.com',
-      'avatars.githubusercontent.com'
+      'avatars.githubusercontent.com',
+      'styles.redditmedia.com'
     ],
     formats: ['image/avif', 'image/webp'],
   },
