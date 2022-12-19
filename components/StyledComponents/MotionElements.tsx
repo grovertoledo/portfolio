@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { ReactComponentElement, ReactElement } from 'react';
 
 type Props = {
-  children: Array<ReactElement>,
+  children: Array<ReactElement> | ReactElement,
   initialNegative: boolean,
   motionValue: number,
 }
@@ -27,7 +27,7 @@ const MotionX = ({children, initialNegative, motionValue}: Props) => {
       transition={{
         duration:  1.5,
       }}
-      className='flex flex-row items-center'
+      className='flex flex-row items-center cursor-pointer'
     >
       {children}
     </motion.div>

@@ -1,97 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SkillItem from '../SkillItem';
+import { Skill } from '../../typings';
 
-type Props = {}
-const skillsItems = [
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
-  {
-    id: 0,
-    name: 'Javascript',
-    img: 'https://styles.redditmedia.com/t5_2su6s/styles/communityIcon_4g1uo0kd87c61.png',
-  },
+type Props = {
+  skills: Skill[]
+}
 
-];
+const Skills = ({skills}: Props) => {
+  const renderFirstHalf = skills.slice(0, skills.length/2).map(skill => 
+    <SkillItem key={skill._id} skill={skill} />
+  );
+  const renderSecondHalf = skills.slice(skills.length/2, skills.length).map(skill => 
+    <SkillItem key={skill._id} skill={skill} directionLeft/>
+  );
 
-const renderSkills = skillsItems.map(({id, name, img}) => 
-  <SkillItem key={id} title={name} img={img} />
-);
-
-const Skills = (props: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0}}
@@ -108,7 +31,8 @@ const Skills = (props: Props) => {
       </h3>
 
       <div className='grid grid-cols-4 gap-5'>
-        {renderSkills}
+        {renderFirstHalf}
+        {renderSecondHalf}
       </div>
     </motion.div>
   )
