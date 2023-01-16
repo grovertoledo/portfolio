@@ -9,7 +9,8 @@ const nextConfig = {
     domains: [
       'media-exp1.licdn.com',
       'avatars.githubusercontent.com',
-      'styles.redditmedia.com'
+      'styles.redditmedia.com',
+      'cdn.sanity.io'
     ],
     formats: ['image/avif', 'image/webp'],
   },
