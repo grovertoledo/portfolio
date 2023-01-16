@@ -7,8 +7,8 @@ type Props = {
   pageInfo: PageInfo,
 }
 
-export const About = ({pageInfo}: Props) => {
-  const profilePhotoURL = urlFor(pageInfo?.profilePic).url();
+export const About = ({pageInfo}: Props) => {  
+  const profilePhotoURL = urlFor(pageInfo?.profilePicture).url();
 
   return (
     <motion.div
