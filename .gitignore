@@ -36,5 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 # sanity modules
-/sanity
+/sanity/node_modules
 /node_modules
