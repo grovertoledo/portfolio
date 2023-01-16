@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
-import { Technology } from "../../typings";
+import type { Technology } from "../../typings";
 
 const query = groq`
   *[_type == "technology"]

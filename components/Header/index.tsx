@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import { SocialIcon } from 'react-social-icons';
-import { Social } from '../../typings';
+import type { Social } from '../../typings';
 import { MotionX } from '../StyledComponents/MotionElements';
 
 type Props = {

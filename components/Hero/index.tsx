@@ -3,7 +3,7 @@ import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import BackgroundCircles from '../BackgroundCircles';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PageInfo } from '../../typings';
+import type { PageInfo } from '../../typings';
 import { urlFor } from '../../sanity';
 
 type Props = {

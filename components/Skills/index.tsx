@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SkillItem from '../SkillItem';
-import { Skill } from '../../typings';
+import type { Skill } from '../../typings';
 
 type Props = {
   skills: Skill[]
